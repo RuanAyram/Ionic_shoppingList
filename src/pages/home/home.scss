@@ -1,3 +1,9 @@
 page-home {
-
+  .scroll-content {
+    background: #252233;
+    background-image: -webkit-radial-gradient(top, circle farthest-corner, #252233 0%, #252233 80%);
+    background-image: -moz-radial-gradient(top, circle farthest-corner, #252233 0%, #252233 80%);
+    background-image: -o-radial-gradient(top, circle farthest-corner, #252233 0%, #252233 80%);
+    background-image: radial-gradient(top, circle farthest-corner, #252233 0%, #252233 80%);
+  }
 }
