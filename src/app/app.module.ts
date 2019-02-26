@@ -9,10 +9,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FIREBASE_CONFIG } from './firebase.credentials';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { NoteListService } from '../services/note-list.service';
 
 @NgModule({
-  declarations: [MyApp, HomePage],
+  declarations: [MyApp],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
@@ -20,11 +20,12 @@ import { HomePage } from '../pages/home/home';
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, HomePage],
+  entryComponents: [MyApp],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NoteListService
   ]
 })
 export class AppModule {}

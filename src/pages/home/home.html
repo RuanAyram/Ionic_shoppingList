@@ -1,14 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      JSA Note
     </ion-title>
+
+    <ion-buttons end>
+      <button navPush="AddNotePage" ion-button>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-list-header>
+      Notes
+    </ion-list-header>
+
+    <ion-item *ngFor="let note of noteList | async"
+    detail-push navPush="EditNotePage" [navParams]="{note:note}">
+      {{note.title}}
+    </ion-item>
+  </ion-list>
 </ion-content>
